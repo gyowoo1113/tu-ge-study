@@ -61,5 +61,5 @@ crashlytics-build.properties
 TU_STUDY1/Temp/FSTimeGet-1bad00dc3b2986d458dbc333fa53148f
 TU_STUDY1/Temp/UnityLockfile
 TU_STUDY1/Temp/workerlic
-TU_STUDY/Library
-TU_STUDY/Logs
+TU_STUDY/Library/
+TU_STUDY/Logs/
