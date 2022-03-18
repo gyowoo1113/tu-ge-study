@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Monster : MonoBehaviour
 {
     
-    protected abstract void Cry();
+    public abstract void Cry();
 
     // Start is called before the first frame update
     void Start()
