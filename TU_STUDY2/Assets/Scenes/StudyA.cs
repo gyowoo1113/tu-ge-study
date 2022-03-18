@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class StudyA : MonoBehaviour
 {
+    public GameObject studyBGameObject;
+
     private void Start()
     {
-
+        print(studyBGameObject.name);
     }
 }
