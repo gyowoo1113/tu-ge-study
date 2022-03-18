@@ -8,6 +8,7 @@ public class StudyA : MonoBehaviour
 
     private void Start()
     {
-
+        var b = transform.Find("B");
+        print(b.name);
     }
 }
