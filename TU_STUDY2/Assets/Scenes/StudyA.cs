@@ -9,7 +9,11 @@ public class StudyA : MonoBehaviour
     private void Start()
     {
         studyBGameObject = new GameObject("B");
+        studyBGameObject.AddComponent<StudyB>();
+
         print(studyBGameObject.name);
-        Destroy(studyBGameObject);
+
+        var studyB = studyBGameObject.GetComponent<StudyB>();
+        studyB.SendMessage("SayHello");
     }
 }
