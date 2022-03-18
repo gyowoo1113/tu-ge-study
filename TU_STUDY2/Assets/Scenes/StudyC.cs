@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StudyC : MonoBehaviour
 {
-    private void Start() {
-        var b = transform.parent;
-        print(b.name);
+    private void Start() 
+    {
+        transform.parent = null;
     }
 }
