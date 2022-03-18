@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class StudyA : MonoBehaviour
 {
-    public GameObject studyBGameObject;
+    private GameObject studyBGameObject;
 
     private void Start()
     {
+        studyBGameObject = GameObject.Find("B");
         print(studyBGameObject.name);
     }
 }
