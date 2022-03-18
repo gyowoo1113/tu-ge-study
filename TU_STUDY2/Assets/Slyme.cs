@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Slyme : Monster
 {
-    
+    protected override void Cry()
+    {
+        print("라임라임");
+    }
 }

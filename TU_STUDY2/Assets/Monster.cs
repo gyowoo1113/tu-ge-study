@@ -4,10 +4,13 @@ using UnityEngine;
 
 public abstract class Monster : MonoBehaviour
 {
+    
+    protected abstract void Cry();
+
     // Start is called before the first frame update
     void Start()
     {
-        print("크오아아앙!");
+        Cry();
     }
 
     // Update is called once per frame
