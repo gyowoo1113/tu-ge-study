@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class StudyC : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void SayHello()
-    {
-        print("안녕하세요.C에서 인사해요.");
+    private void Start() {
+        var b = transform.parent;
+        print(b.name);
     }
 }
