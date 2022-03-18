@@ -10,10 +10,11 @@ public class StudyA : MonoBehaviour
     {
         studyBGameObject = new GameObject("B");
         studyBGameObject.AddComponent<StudyB>();
+        studyBGameObject.AddComponent<StudyC>();
 
         print(studyBGameObject.name);
 
         var studyB = studyBGameObject.GetComponent<StudyB>();
-        studyB.SendMessage("SayHello");
+        studyBGameObject.SendMessage("SayHello");
     }
 }
