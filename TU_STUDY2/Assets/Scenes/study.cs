@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class study : MonoBehaviour
 {
+    private const float AttackInterval = 3f;
+    private float _atttackIntervalTimer;
+    
     void Start()
     {
-        Invoke("PrintText",3f);
+        InvokeRepeating("PrintText", 9f, 3f);
     }
 
     // Update is called once per frame
