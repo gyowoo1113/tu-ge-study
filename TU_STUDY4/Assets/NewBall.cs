@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NewBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnMove(InputValue value)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        print(value.Get<Vector2>());
     }
 }
