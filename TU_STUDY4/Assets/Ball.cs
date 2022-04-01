@@ -18,6 +18,11 @@ public class Ball : MonoBehaviour
         var ver = Input.GetAxis("Vertical");
 
         direction = new Vector3(hor,0,ver);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            direction += new Vector3(0,100f,0);
+        }
     }
 
     private void FixedUpdate()
