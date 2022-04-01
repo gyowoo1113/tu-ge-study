@@ -26,7 +26,14 @@ public class Ball : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            print($"Mouse Button Down: {Input.mousePosition}");
+            var pos = Input.mousePosition;
+            var cam = FindObjectOfType<Camera>();
+            var ray = cam.ScreenPointToRay(pos);
+            
+            if(Physics.Raycast(ray,out var hitInfo))
+            {
+                print(hitInfo.collider.name);
+            }
         }
     }
 
