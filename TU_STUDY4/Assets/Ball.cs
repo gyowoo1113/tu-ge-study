@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody _rigidbody;
+    private Vector3 direction;
     
     private void Awake()
     {
@@ -16,7 +17,11 @@ public class Ball : MonoBehaviour
         var hor = Input.GetAxis("Horizontal");
         var ver = Input.GetAxis("Vertical");
 
-        var direction = new Vector3(hor,0,ver);
+        direction = new Vector3(hor,0,ver);
+    }
+
+    private void FixedUpdate()
+    {
         _rigidbody.AddForce(direction);
     }
 }
