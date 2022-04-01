@@ -26,7 +26,7 @@ public class Ball : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            print("Mouse Button Down");
+            print($"Mouse Button Down: {Input.mousePosition}");
         }
     }
 
