@@ -14,9 +14,9 @@ public class Ball : MonoBehaviour
     void Update()
     {
         var hor = Input.GetAxis("Horizontal");
-        print($"horizontaol: {hor}");
+        var ver = Input.GetAxis("Vertical");
 
-        var direction = new Vector3();
+        var direction = new Vector3(hor,0,ver);
         _rigidbody.AddForce(direction);
     }
 }
