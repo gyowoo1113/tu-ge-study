@@ -23,6 +23,11 @@ public class Ball : MonoBehaviour
         {
             direction += new Vector3(0,100f,0);
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            print("Mouse Button Down");
+        }
     }
 
     private void FixedUpdate()
