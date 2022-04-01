@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody _rigidbody;
+    
+    private void Awake()
     {
-        
+        _rigidbody = GetComponent<Rigidbody>();    
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        var hor = Input.GetAxis("Horizontal");
+        print($"horizontaol: {hor}");
+
+        var direction = new Vector3();
+        _rigidbody.AddForce(direction);
     }
 }
