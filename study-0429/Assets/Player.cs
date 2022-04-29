@@ -13,9 +13,9 @@ public class Player : MonoBehaviour
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
             var itemLowerthan3 = 
-                    from item in itemDatas
-                    where item.itemLevel < 3
-                    select item.itemName;
+                itemDatas
+                    .Where(item => item.itemLevel < 3)
+                    .Select(item => item.itemName);
             
             foreach(var itemName in itemLowerthan3)
                 print(itemName);
