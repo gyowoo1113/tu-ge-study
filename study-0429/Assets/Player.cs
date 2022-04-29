@@ -12,11 +12,13 @@ public class Player : MonoBehaviour
             GameManager.Instance.coin++;
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
-            var sword1 = itemDatas.FirstOrDefault(item => item.itemName = "Sword1");
-            if (sword1 != null)
-                print($"{sword1.itemName}: Lv.{sword1.itemLevel}");
-            //else
-                //print($"{sword1.itemName}: Lv.{sword1.itemLevel}");
+            var itemDatasOrderdByLevel = 
+                itemDatas.OrderBy(item => item.itemLevel);
+            
+            foreach(var itemData in itemDatasOrderdByLevel)
+            {
+                print(itemData.itemName);
+            }
         }
     }
 }
