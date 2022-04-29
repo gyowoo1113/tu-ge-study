@@ -24,5 +24,5 @@ public class GameManager : MonoBehaviour
     }
     
     public int coin;
-
+    public ItemDatabase itemDatabase;
 }
