@@ -12,13 +12,19 @@ public class Player : MonoBehaviour
             GameManager.Instance.coin++;
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
-            var itemNames = itemDatas
-            .Select(item => item.itemName)
-            .Aggregate((before,after) => 
+            var swordDatas = itemDatas
+                .Where(item => item.itemName.Contains("Sword"))
+                .Select(item => new SwordData
+                {
+                    itemName = item.itemName;
+                    itemLevel = itemDatas.itemLEvel;
+                    attackPower = 10 * itemDatas.itemLevel;
+                });
+
+            foreach(var swordData in swordDatas)
             {
-                return before.itemName + "," + after.itemName;
-            });
-            print(itemNames);
+                print($"{swordData.itemName}'s Power : {swordData.attackPower}");
+            }
         }
     }
 }

@@ -18,3 +18,11 @@ public class ItemData
     public float itemDefaultDur;
 }
 
+[Serializable]
+public class SwordData
+{
+    public string itemName;
+    public int itemLevel;
+    public float attackPower;
+}
+
