@@ -12,13 +12,13 @@ public class Player : MonoBehaviour
             GameManager.Instance.coin++;
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
-            var itemDatasOrderdByLevel = 
-                itemDatas.OrderBy(item => item.itemLevel);
-            
-            foreach(var itemData in itemDatasOrderdByLevel)
+            var itemNames = itemDatas
+            .Select(item => item.itemName)
+            .Aggregate((before,after) => 
             {
-                print(itemData.itemName);
-            }
+                return before.itemName + "," + after.itemName;
+            });
+            print(itemNames);
         }
     }
 }
