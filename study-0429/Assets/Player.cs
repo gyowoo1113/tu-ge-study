@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    int SomeMethod(int someParam)
+    {
+        return 135245;
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) 
@@ -12,13 +17,8 @@ public class Player : MonoBehaviour
             GameManager.Instance.coin++;
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
-            var itemLowerthan3 = 
-                itemDatas
-                    .Where(item => item.itemLevel < 3)
-                    .Select(item => item.itemName);
-            
-            foreach(var itemName in itemLowerthan3)
-                print(itemName);
+            if(itemDatas.Any(item => item.itemLevel > 10))
+
         }
     }
 }
