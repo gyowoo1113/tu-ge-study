@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(order = 0,fileName ="Item Database",menuName ="Study/Item/Create Item DB")]
 public class ItemDataBase : ScriptableObject
 {
-    public ItemData[] itemDAtas;
+    public ItemData[] itemDatas;
 }
 
 [Serializable]

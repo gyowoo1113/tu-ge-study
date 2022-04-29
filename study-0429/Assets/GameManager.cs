@@ -7,14 +7,14 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
     
-    public static GameManager Instance;
+    public static GameManager Instance
     {
         get
         {
             if (_instance == null){
                 _instance = FindObjectOfType<GameManager>();
             }
-            if (_istance == null){
+            if (_instance == null){
                 var go = new GameObject(nameof(GameManager));
                 _instance = go.AddComponent<GameManager>();
             }
@@ -24,5 +24,5 @@ public class GameManager : MonoBehaviour
     }
     
     public int coin;
-    public ItemDatabase itemDatabase;
+    public ItemDataBase itemDatabase;
 }

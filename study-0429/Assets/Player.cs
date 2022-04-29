@@ -16,9 +16,9 @@ public class Player : MonoBehaviour
                 .Where(item => item.itemName.Contains("Sword"))
                 .Select(item => new SwordData
                 {
-                    itemName = item.itemName;
-                    itemLevel = itemDatas.itemLEvel;
-                    attackPower = 10 * itemDatas.itemLevel;
+                    itemName = item.itemName,
+                    itemLevel = item.itemLevel,
+                    attackPower = 10 * item.itemLevel,
                 });
 
             foreach(var swordData in swordDatas)
