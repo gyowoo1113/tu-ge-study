@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    int SomeMethod(int someParam)
-    {
-        return 135245;
-    }
-    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) 
@@ -17,8 +12,11 @@ public class Player : MonoBehaviour
             GameManager.Instance.coin++;
             var itemDatas = GameManager.Instance.itemDatabase.itemDatas;
 
-            if(itemDatas.Any(item => item.itemLevel > 10))
-
+            var sword1 = itemDatas.FirstOrDefault(item => item.itemName = "Sword1");
+            if (sword1 != null)
+                print($"{sword1.itemName}: Lv.{sword1.itemLevel}");
+            //else
+                //print($"{sword1.itemName}: Lv.{sword1.itemLevel}");
         }
     }
 }
