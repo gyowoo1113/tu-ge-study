@@ -5,14 +5,24 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager Instance;
-    public int coin;
+    private static GameManager _instance;
     
-    private void Awake() 
+    public static GameManager Instance;
     {
-        if (Instance != null){
-            Debug.LogWarning("이미 있음...");
+        get
+        {
+            if (_instance == null){
+                _instance = FindObjectOfType<GameManager>();
             }
-        Instance = this;
+            if (_istance == null){
+                var go = new GameObject(nameof(GameManager));
+                _instance = go.AddComponent<GameManager>();
+            }
+            
+            return _instance;
+        }
     }
+    
+    public int coin;
+
 }
