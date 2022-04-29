@@ -21,7 +21,7 @@ MonoBehaviour:
     itemThumnail: {fileID: 0}
     itemLevel: 2
     itemDefaultDur: 0
-  - itemName: Sword3
+  - itemName: Gun
     itemThumnail: {fileID: 0}
     itemLevel: 3
     itemDefaultDur: 0
