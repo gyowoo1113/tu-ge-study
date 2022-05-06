@@ -39,4 +39,16 @@ public class EventManager : MonoBehaviour
             _eventDb[eventName] = action;
         }
     }
+
+    public void Emit(string eventName)
+    {
+        if (_eventDb.ContainsKey(eventName))
+        {
+            _eventDb[eventName].Invoke();
+        }
+        else
+        {
+            Debug.LogError($"'{eventName}'이라는 이벤트는 없음");
+        }
+    }
 }
