@@ -11,8 +11,8 @@ public class Subscriber : MonoBehaviour
         EventManager.Instance.Subscribe(eventName,OnEvent);
     }
 
-    private void OnEvent()
+    private void OnEvent(object param)
     {
-        print($"{gameObject.name} : {eventName} 발동");
+        print($"{gameObject.name} : {eventName} 발동, 파라매터는 {param}");
     }
 }

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: helloworld
+  param: 12
 --- !u!4 &191917347
 Transform:
   m_ObjectHideFlags: 0

@@ -7,11 +7,11 @@ public class EventManager : MonoBehaviour
 {
     private static EventManager _instance;
 
-    private Dictionary<string, Action> _eventDb;
+    private Dictionary<string, Action<object>> _eventDb;
     
     private void Awake()
     {
-        _eventDb = new Dictionary<string, Action>();
+        _eventDb = new Dictionary<string, Action<object>>();
     }
 
     public static EventManager Instance
@@ -28,7 +28,7 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void Subscribe(string eventName, Action action)
+    public void Subscribe(string eventName, Action<object> action)
     {
         if (_eventDb.ContainsKey(eventName))
         {
@@ -40,11 +40,11 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void Emit(string eventName)
+    public void Emit(string eventName, object param = null)
     {
         if (_eventDb.ContainsKey(eventName))
         {
-            _eventDb[eventName].Invoke();
+            _eventDb[eventName].Invoke(param);
         }
         else
         {
